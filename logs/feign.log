@@ -1,0 +1,29 @@
+2018-11-08 at 11:10:03 CST INFO  org.springframework.boot.SpringApplication 659 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2018-11-08 at 11:10:04 CST INFO  org.springframework.cloud.context.scope.GenericScope 294 setSerializationId - BeanFactory id=cf2fd547-f1b7-3bfd-a159-66709038a7a1
+2018-11-08 at 11:10:07 CST INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 71 create - Setting initial instance status as: STARTING
+2018-11-08 at 11:10:09 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 42 register - Registering application service-feign with eureka with status UP
+2018-11-08 at 11:10:09 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 124 onApplicationEvent - Updating port to 8765
+2018-11-08 at 11:10:09 CST INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started ServiceFeignApplication in 7.51 seconds (JVM running for 8.463)
+2018-11-08 at 11:10:48 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:10:48 CST 2018李四！
+2018-11-08 at 11:11:11 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:11 CST 2018李四！
+2018-11-08 at 11:11:12 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:12 CST 2018李四！
+2018-11-08 at 11:11:12 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:12 CST 2018李四！
+2018-11-08 at 11:11:12 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:12 CST 2018李四！
+2018-11-08 at 11:11:12 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:12 CST 2018李四！
+2018-11-08 at 11:11:13 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 11:11:13 CST 2018李四！
+2018-11-08 at 11:13:31 CST INFO  org.springframework.boot.SpringApplication 659 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2018-11-08 at 11:13:33 CST INFO  org.springframework.cloud.context.scope.GenericScope 294 setSerializationId - BeanFactory id=cf2fd547-f1b7-3bfd-a159-66709038a7a1
+2018-11-08 at 11:13:43 CST INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 71 create - Setting initial instance status as: STARTING
+2018-11-08 at 11:13:46 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 42 register - Registering application service-feign with eureka with status UP
+2018-11-08 at 11:13:46 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 124 onApplicationEvent - Updating port to 8765
+2018-11-08 at 11:13:46 CST INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started ServiceFeignApplication in 20.492 seconds (JVM running for 22.419)
+2018-11-08 at 11:13:57 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:57 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:57 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:57 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
