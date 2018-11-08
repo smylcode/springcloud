@@ -34,12 +34,11 @@ public class FeignFilter implements Filter{
         httpResponse.setContentType("application/json; charset=utf-8");
         httpResponse.setCharacterEncoding("UTF-8");
         String uri = httpRequest.getRequestURI();
-        System.out.println("访问接口url:" + uri);
         String token = httpRequest.getParameter("token");
-        if (StringUtils.isEmpty(token)) {
+        if (StringUtils.isEmpty(token) && !uri.contains("/favicon.ico")) {
             PrintWriter print = httpResponse.getWriter();
             print.write(JSON.toJSONString(ReturnModel.fail("token不能为空！")));
-            log.error("token不能为空！");
+            log.error("路径url:" + uri + ",token不能为空！");
             print.close();
             return;
         }

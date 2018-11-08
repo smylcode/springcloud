@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Date;
 
 /**
  * @author gouchao
@@ -30,8 +29,8 @@ public class FeignController {
 
     @RequestMapping(value = "/count",method = RequestMethod.GET)
     public ReturnModel count(HttpServletRequest request){
-        System.out.println("name:" + request.getAttribute("name"));
-        String countInfo = userService.countUser();log.info(new Date().toString() + request.getAttribute("name"));
+        String countInfo = userService.countUser();
+        log.info(request.getAttribute("name"));
         return ReturnModel.success("获取统计信息成功！", countInfo);
     }
 

@@ -27,3 +27,41 @@
 2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
 2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
 2018-11-08 at 11:13:58 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 13:36:07 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 13:36:07 CST 2018李四！
+2018-11-08 at 13:36:07 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 13:37:05 CST INFO  org.springframework.boot.SpringApplication 659 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2018-11-08 at 13:37:07 CST INFO  org.springframework.cloud.context.scope.GenericScope 294 setSerializationId - BeanFactory id=cf2fd547-f1b7-3bfd-a159-66709038a7a1
+2018-11-08 at 13:37:11 CST INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 71 create - Setting initial instance status as: STARTING
+2018-11-08 at 13:37:15 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 42 register - Registering application service-feign with eureka with status UP
+2018-11-08 at 13:37:15 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 124 onApplicationEvent - Updating port to 8765
+2018-11-08 at 13:37:15 CST INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started ServiceFeignApplication in 12.32 seconds (JVM running for 13.736)
+2018-11-08 at 13:37:19 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 13:37:20 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 13:37:20 CST 2018李四！
+2018-11-08 at 13:37:21 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 13:37:21 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 14:01:59 CST INFO  org.springframework.boot.SpringApplication 659 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+2018-11-08 at 14:02:00 CST INFO  org.springframework.cloud.context.scope.GenericScope 294 setSerializationId - BeanFactory id=cf2fd547-f1b7-3bfd-a159-66709038a7a1
+2018-11-08 at 14:02:03 CST INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory 71 create - Setting initial instance status as: STARTING
+2018-11-08 at 14:02:04 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry 42 register - Registering application service-feign with eureka with status UP
+2018-11-08 at 14:02:04 CST INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration 124 onApplicationEvent - Updating port to 8765
+2018-11-08 at 14:02:04 CST INFO  org.springframework.boot.StartupInfoLogger 59 logStarted - Started ServiceFeignApplication in 7.673 seconds (JVM running for 8.603)
+2018-11-08 at 14:02:09 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 14:02:10 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 14:02:10 CST 2018李四！
+2018-11-08 at 14:02:10 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 14:02:10 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 14:02:36 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 14:02:36 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 14:02:36 CST 2018李四！
+2018-11-08 at 14:02:36 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 14:02:36 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 14:02:37 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 14:02:37 CST 2018李四！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 14:02:37 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 14:02:37 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 14:02:37 CST 2018李四！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 14:02:37 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/feign/count
+2018-11-08 at 14:02:37 CST INFO  com.example.servicefeign.FeignController 34 count - Thu Nov 08 14:02:37 CST 2018李四！
+2018-11-08 at 14:02:37 CST INFO  com.example.filter.FeignFilter 37 doFilter - 访问接口url:/favicon.ico
+2018-11-08 at 14:02:37 CST ERROR com.example.filter.FeignFilter 42 doFilter - token不能为空！
