@@ -3,6 +3,6 @@
 <mapper namespace="com.example.servicecommon.dao.UserDao" >
 
     <select id="countUser" resultType="Integer">
-        select count(id) from registeruser
+        select count(id) from `user`
     </select>
 </mapper>
