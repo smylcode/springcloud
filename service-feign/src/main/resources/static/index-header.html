@@ -1,0 +1,23 @@
+<div class="layui-header">
+    <div class="layui-logo">学习项目</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul id="topNavHeader" lay-filter="topNavHeader">
+        <!-- 显示/隐藏菜单 -->
+        <a href="javascript:;" class="iconfont hideMenu icon-menu"></a>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-username"></i>
+                <span id="userinfo">test</span>
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a id="modifyPwd"> <i class="layui-icon layui-icon-edit"></i> 修改密码</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="javascript:logout()" class="signOut" id="useroper_logout"><i class="layui-icon layui-icon-snowflake"></i> 注销</a>
+        </li>
+    </ul>
+</div>
+<script src="/page/header.js"></script>

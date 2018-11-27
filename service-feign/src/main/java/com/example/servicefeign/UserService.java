@@ -3,6 +3,9 @@ package com.example.servicefeign;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * @author gouchao
@@ -12,4 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface UserService {
     @RequestMapping(value = "/user/count", method = RequestMethod.GET)
     String countUser();
+
+    @RequestMapping(value = "/user/findByName", method = RequestMethod.POST)
+    Map<String, String> findByName(@RequestParam("loginName") String loginName);
 }
