@@ -66,3 +66,10 @@ body {
     border: 0;
     border-radius: 5px;
 }
+
+#submit_btn:hover{
+    background-color: #009E94;
+}
+#submit_btn:active{
+    background-color: #5FB878;
+}

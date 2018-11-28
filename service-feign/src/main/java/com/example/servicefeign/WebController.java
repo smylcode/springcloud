@@ -1,5 +1,6 @@
 package com.example.servicefeign;
 
+import com.example.utils.Md5util;
 import com.example.utils.ReturnModel;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang.StringUtils;
@@ -88,6 +89,7 @@ public class WebController {
                 return ReturnModel.fail("用户名不存在！");
             }
             String tempPassword = map.get("password");
+            password = Md5util.encryptByMD5(password);
             if (!password.equals(tempPassword)) {
                 return ReturnModel.fail("密码错误！");
             }
