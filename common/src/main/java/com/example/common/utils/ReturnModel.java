@@ -1,4 +1,4 @@
-package com.example.utils;
+package com.example.common.utils;
 
 
 import lombok.Getter;
@@ -11,32 +11,39 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ReturnModel {
+    //返回码：0成功，-1 失败，-2 token失效, -3 非法请求
     private int code;
-    private String message;
+    private String des;
     private Object data;
     public static ReturnModel success(){
         ReturnModel temp = new ReturnModel();
         temp.code = 0 ;
-        temp.message = "成功！";
+        temp.des = "成功！";
         return temp;
     }
     public static ReturnModel success(String message){
         ReturnModel temp = new ReturnModel();
         temp.code = 0 ;
-        temp.message = message;
+        temp.des = message;
+        return temp;
+    }
+    public static ReturnModel success(Object data){
+        ReturnModel temp = new ReturnModel();
+        temp.code = 0 ;
+        temp.data = data;
         return temp;
     }
     public static ReturnModel success(String message, Object data){
         ReturnModel temp = new ReturnModel();
         temp.code = 0 ;
-        temp.message = message;
+        temp.des = message;
         temp.data = data;
         return temp;
     }
     public static ReturnModel fail(String message, Object data){
         ReturnModel temp = new ReturnModel();
         temp.code = -1 ;
-        temp.message = message;
+        temp.des = message;
         temp.data = data;
         return temp;
     }
@@ -44,7 +51,14 @@ public class ReturnModel {
     public static ReturnModel fail(String message){
         ReturnModel temp = new ReturnModel();
         temp.code = -1 ;
-        temp.message = message;
+        temp.des = message;
+        return temp;
+    }
+
+    public static ReturnModel fail(int code, String message){
+        ReturnModel temp = new ReturnModel();
+        temp.code = code;
+        temp.des = message;
         return temp;
     }
 }

@@ -30,7 +30,7 @@ public class ServiceFeignApplication {
 	public FilterRegistrationBean someFilterRegistration() {
 		FilterRegistrationBean registration = new FilterRegistrationBean();
 		registration.setFilter(new FeignFilter());
-		registration.addUrlPatterns("/*");
+		registration.addUrlPatterns("/feign/web/*");
 		registration.addInitParameter("paramName", "paramValue");
 		registration.setName("basicFilter");
 		registration.setOrder(Integer.MAX_VALUE);

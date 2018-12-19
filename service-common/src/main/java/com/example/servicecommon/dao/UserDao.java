@@ -1,8 +1,7 @@
 package com.example.servicecommon.dao;
 
+import com.example.common.dto.UserDto;
 import org.apache.ibatis.annotations.Mapper;
-
-import java.util.Map;
 
 /**
  * @author gouchao
@@ -12,5 +11,7 @@ import java.util.Map;
 public interface UserDao {
     int countUser();
 
-    Map<String, String> findByName(String userName);
+    UserDto findByName(String userName);
+
+    UserDto findById(String id);
 }

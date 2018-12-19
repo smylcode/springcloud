@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.servicecommon.dao.AuthDao">
+    <resultMap id="userMap" type="com.example.common.dto.AuthTopDto">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="icon" property="icon"/>
+    </resultMap>
+    <resultMap id="leftMap" type="com.example.common.dto.AuthLeftDto">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="icon" property="icon"/>
+        <result column="url" property="url"/>
+        <result column="parentId" property="parentId"/>
+        <result column="top_id" property="topId"/>
+    </resultMap>
+    <select id="authTopList" parameterType="String" resultMap="userMap">
+        select id,`name`,icon from `auth` order by `order`
+    </select>
+
+    <select id="authLeftist" parameterType="String" resultMap="leftMap">
+        select id,`name`,icon, url, parentId,top_id from `auth_left` WHERE top_id = #{topId} order by `order`
+    </select>
+</mapper>

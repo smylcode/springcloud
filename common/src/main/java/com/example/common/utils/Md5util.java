@@ -1,7 +1,7 @@
-package com.example.utils;
+package com.example.common.utils;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang.StringUtils;
 
 /**
  * @author gouchao

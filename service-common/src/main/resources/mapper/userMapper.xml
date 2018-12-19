@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.servicecommon.dao.UserDao">
-    <resultMap id="userMap" type="HashMap">
+    <resultMap id="userMap" type="com.example.common.dto.UserDto">
+        <result column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="password" property="password"/>
     </resultMap>
@@ -10,6 +11,9 @@
     select count(id) from `user`
     </select>
     <select id="findByName" parameterType="String" resultMap="userMap">
-        select `name`, password from `user` WHERE `name` = #{userName}
+        select * from `user` WHERE `name` = #{userName}
+    </select>
+    <select id="findById" parameterType="String" resultMap="userMap">
+        select * from `user` WHERE `id` = #{id}
     </select>
 </mapper>

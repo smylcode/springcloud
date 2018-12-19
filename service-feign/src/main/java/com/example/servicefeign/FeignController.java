@@ -1,6 +1,6 @@
 package com.example.servicefeign;
 
-import com.example.utils.ReturnModel;
+import com.example.common.utils.ReturnModel;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

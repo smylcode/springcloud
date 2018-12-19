@@ -1,7 +1,11 @@
 package com.example.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.example.utils.ReturnModel;
+import com.example.common.dto.UserDto;
+import com.example.common.utils.ReturnModel;
+import com.example.common.utils.TokenUtil;
+import com.example.servicefeign.WebController;
+import com.example.utils.ApplicationContextRegister;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang.StringUtils;
 
@@ -15,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 /**
  * @author gouchao
@@ -22,6 +27,7 @@ import java.io.PrintWriter;
  */
 @Log4j2
 public class FeignFilter implements Filter{
+    private String[] excludeUrl = {"/feign/web/doLogin"};
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("filterConfig.getServletContext(): " + filterConfig.getServletContext());
@@ -34,16 +40,29 @@ public class FeignFilter implements Filter{
         httpResponse.setContentType("application/json; charset=utf-8");
         httpResponse.setCharacterEncoding("UTF-8");
         String uri = httpRequest.getRequestURI();
-        String token = httpRequest.getParameter("token");
-        token = "1";
-        if (StringUtils.isEmpty(token) && !uri.contains("/favicon.ico")) {
+        if (Arrays.asList(excludeUrl).contains(uri) || uri.contains("/js/")
+                || uri.contains("/css/")) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
+        String token = httpRequest.getHeader("Authorization");
+        log.info("访问接口url:" + uri);
+        ReturnModel model = TokenUtil.getInstance().checkToken(token);
+        if (model.getCode() != 0) {
+            PrintWriter print = httpResponse.getWriter();
+            print.write(model.getDes());
+            return;
+        }
+        WebController webController = ApplicationContextRegister.getApplicationContext().getBean(WebController.class);
+        UserDto user = webController.findUserById(model.getData().toString());
+        if (StringUtils.isEmpty(token)) {
             PrintWriter print = httpResponse.getWriter();
             print.write(JSON.toJSONString(ReturnModel.fail("token不能为空！")));
             log.error("路径url:" + uri + ",token不能为空！");
             print.close();
             return;
         }
-        servletRequest.setAttribute("name", "李四！");
+        servletRequest.setAttribute("user", user);
         filterChain.doFilter(servletRequest, servletResponse);
     }
 

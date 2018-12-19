@@ -1,10 +1,9 @@
 package com.example.servicecommon.service;
 
+import com.example.common.dto.UserDto;
 import com.example.servicecommon.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 /**
  * @author gouchao
@@ -19,8 +18,13 @@ public class CommonUserService {
         return userDao.countUser();
     }
 
-    public Map<String, String> findByName(String loginName){
-        Map<String, String> userInfo = userDao.findByName(loginName);
+    public UserDto findByName(String loginName){
+        UserDto userInfo = userDao.findByName(loginName);
+        return userInfo;
+    }
+
+    public UserDto findById(String id){
+        UserDto userInfo = userDao.findById(id);
         return userInfo;
     }
 }
